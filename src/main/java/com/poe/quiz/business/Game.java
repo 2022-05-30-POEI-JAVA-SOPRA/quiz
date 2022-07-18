@@ -4,13 +4,17 @@ import java.util.ArrayList;
 
 public class Game {
     
-   QuestionsStore store = new QuestionsStore();
+   private QuestionsStore store = new QuestionsStore();
+
+    public QuestionsStore getStore() {
+        return store;
+    }
     
     public Game() {
         
         Question question1 = new Question("Qui est le chanteur du groupe Queen ?");
         Answer[] answers = { new Answer("Mick Jagger", false), 
-                            new Answer("Freddie Mercury", true),
+                             new Answer("Freddie Mercury", true),
                              new Answer("Claude François", false)   };
 
         store.addQuestion(question1, answers);
