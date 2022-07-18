@@ -4,22 +4,22 @@ import java.util.ArrayList;
 
 public class Game {
     
-    private ArrayList<Question> questions = new ArrayList<>();
+   QuestionsStore store = new QuestionsStore();
     
     public Game() {
         
         Question question1 = new Question("Qui est le chanteur du groupe Queen ?");
-        question1.addAnswer(new Answer("Mick Jagger", false));
-        question1.addAnswer(new Answer("Freddie Mercury", true));
-        question1.addAnswer(new Answer("Claude François", false));
-        
-        questions.add(question1);
+        Answer[] answers = { new Answer("Mick Jagger", false), 
+                            new Answer("Freddie Mercury", true),
+                             new Answer("Claude François", false)   };
+
+        store.addQuestion(question1, answers);
     }
     
     
     public boolean validateAnswer(Long questionId, Long answerId){
         
-        for(Question question : questions){
+        for(Question question : store.getQuestions()){
             if(question.getId().equals(questionId)){
                 for(Answer answer : question.getAnswers()){
                     if(answer.getId().equals(answerId)){
