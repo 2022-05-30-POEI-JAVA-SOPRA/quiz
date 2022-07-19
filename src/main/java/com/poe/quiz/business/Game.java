@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Game {
     
-   private QuestionsStore store = new QuestionsStore();
+    private QuestionsStoreInterface store = new QuestionsStore();
 
-    public QuestionsStore getStore() {
+    public QuestionsStoreInterface getStore() {
         return store;
     }
     

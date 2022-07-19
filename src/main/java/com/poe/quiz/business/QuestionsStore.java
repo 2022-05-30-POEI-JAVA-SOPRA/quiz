@@ -2,7 +2,7 @@ package com.poe.quiz.business;
 
 import java.util.ArrayList;
 
-public class QuestionsStore {
+public class QuestionsStore implements QuestionsStoreInterface {
     
      private ArrayList<Question> questions = new ArrayList<>();
      private Long questionIndex = 0L;
@@ -26,10 +26,4 @@ public class QuestionsStore {
     public ArrayList<Question> getQuestions() {
         return questions;
     }
-
-    public void setQuestions(ArrayList<Question> questions) {
-        this.questions = questions;
-    }
-
-     
 }
