@@ -1,4 +1,4 @@
-package consoleApp;
+package com.poe.quiz.consoleApp;
 
 import com.poe.quiz.business.Answer;
 import com.poe.quiz.business.Game;
